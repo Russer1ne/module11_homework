@@ -1,0 +1,23 @@
+
+function example(func){
+
+ x = func();
+
+  return function(){
+
+    return 6 + x;
+
+  }
+
+}
+
+
+function argFunc(){
+
+  return 5;
+
+}
+
+const resultFunc = example(argFunc);
+
+console.log(resultFunc());

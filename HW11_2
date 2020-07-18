@@ -1,0 +1,25 @@
+x = prompt('Введите число не больше 1000 для проверки простое оно или нет')
+let prime;
+function isPrime(num) {
+  if (num < 2 || num % 2 === 0) return false;
+  for (var i = 3, sqrt = Math.sqrt(x); i <= sqrt; i += 2) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+if (x==0||x==1||x>1000){
+  
+  console.log('Введеное вами число равно 0, 1 или больше 1000. Попробуйте снова.')
+} else{
+  
+  prime = isPrime(x);
+  
+  if (prime) {
+    
+    console.log(x + ' является простым числом');
+  }else{
+    console.log(x + ' не является простым числом');
+  }
+  
+}
+

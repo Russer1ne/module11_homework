@@ -1,0 +1,9 @@
+const extent = (a,b) =>{
+  x=a;
+  for(let i = 1;i<b;i++){
+    x = x*a;
+  }
+  console.log(x);
+}
+
+extent(14,5);
