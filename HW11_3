@@ -21,3 +21,16 @@ function argFunc(){
 const resultFunc = example(argFunc);
 
 console.log(resultFunc());
+
+// Не совсем верно понято задание. Функция должна принимать число в качестве аргумента (а не другую функцию), и возвращать ещё одну функцию, которая также принимает в качестве аргумента число. Т.е. числа, которые нужно сложить, задаются не внутри функции, а извне. Вот верный вариант решения:
+
+
+function getSumFunction(a) {
+  return function(b) {
+  	return a+b
+  }
+};
+
+const sumFunction = getSumFunction(2);
+
+console.log(sumFunction(3)); // 5
